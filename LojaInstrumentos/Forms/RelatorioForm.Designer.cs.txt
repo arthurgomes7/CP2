@@ -1,0 +1,218 @@
+namespace LojaInstrumentos.Forms
+{
+    partial class RelatorioForm
+    {
+        private System.ComponentModel.IContainer components = null;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        private void InitializeComponent()
+        {
+            DataGridViewCellStyle dataStyle = new DataGridViewCellStyle();
+            DataGridViewCellStyle totalStyle = new DataGridViewCellStyle();
+            DataGridViewCellStyle precoStyle = new DataGridViewCellStyle();
+            DataGridViewCellStyle subtotalStyle = new DataGridViewCellStyle();
+            lblResumo = new Label();
+            dgvVendas = new DataGridView();
+            colId = new DataGridViewTextBoxColumn();
+            colData = new DataGridViewTextBoxColumn();
+            colCliente = new DataGridViewTextBoxColumn();
+            colItens = new DataGridViewTextBoxColumn();
+            colTotal = new DataGridViewTextBoxColumn();
+            lblDetalhe = new Label();
+            dgvItens = new DataGridView();
+            colItemNome = new DataGridViewTextBoxColumn();
+            colItemPreco = new DataGridViewTextBoxColumn();
+            colItemQuantidade = new DataGridViewTextBoxColumn();
+            colItemSubtotal = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dgvVendas).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvItens).BeginInit();
+            SuspendLayout();
+            //
+            // lblResumo
+            //
+            lblResumo.Dock = DockStyle.Top;
+            lblResumo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblResumo.Location = new Point(0, 0);
+            lblResumo.Name = "lblResumo";
+            lblResumo.Padding = new Padding(15, 0, 0, 0);
+            lblResumo.Size = new Size(800, 50);
+            lblResumo.TabIndex = 0;
+            lblResumo.Text = "Nenhuma venda registrada ainda.";
+            lblResumo.TextAlign = ContentAlignment.MiddleLeft;
+            //
+            // dgvVendas
+            //
+            dgvVendas.AllowUserToAddRows = false;
+            dgvVendas.AllowUserToDeleteRows = false;
+            dgvVendas.AutoGenerateColumns = false;
+            dgvVendas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvVendas.BackgroundColor = SystemColors.Window;
+            dgvVendas.Columns.AddRange(new DataGridViewColumn[] { colId, colData, colCliente, colItens, colTotal });
+            dgvVendas.Dock = DockStyle.Top;
+            dgvVendas.Location = new Point(0, 50);
+            dgvVendas.MultiSelect = false;
+            dgvVendas.Name = "dgvVendas";
+            dgvVendas.ReadOnly = true;
+            dgvVendas.RowHeadersVisible = false;
+            dgvVendas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvVendas.Size = new Size(800, 260);
+            dgvVendas.TabIndex = 1;
+            dgvVendas.SelectionChanged += dgvVendas_SelectionChanged;
+            //
+            // colId
+            //
+            colId.DataPropertyName = "Id";
+            colId.FillWeight = 8F;
+            colId.HeaderText = "Nº";
+            colId.Name = "colId";
+            colId.ReadOnly = true;
+            //
+            // colData
+            //
+            dataStyle.Format = "dd/MM/yyyy HH:mm";
+            colData.DataPropertyName = "Data";
+            colData.DefaultCellStyle = dataStyle;
+            colData.FillWeight = 25F;
+            colData.HeaderText = "Data";
+            colData.Name = "colData";
+            colData.ReadOnly = true;
+            //
+            // colCliente
+            //
+            colCliente.DataPropertyName = "Cliente";
+            colCliente.FillWeight = 32F;
+            colCliente.HeaderText = "Cliente";
+            colCliente.Name = "colCliente";
+            colCliente.ReadOnly = true;
+            //
+            // colItens
+            //
+            colItens.DataPropertyName = "QuantidadeItens";
+            colItens.FillWeight = 10F;
+            colItens.HeaderText = "Itens";
+            colItens.Name = "colItens";
+            colItens.ReadOnly = true;
+            //
+            // colTotal
+            //
+            totalStyle.Format = "C2";
+            colTotal.DataPropertyName = "Total";
+            colTotal.DefaultCellStyle = totalStyle;
+            colTotal.FillWeight = 25F;
+            colTotal.HeaderText = "Total";
+            colTotal.Name = "colTotal";
+            colTotal.ReadOnly = true;
+            //
+            // lblDetalhe
+            //
+            lblDetalhe.Dock = DockStyle.Top;
+            lblDetalhe.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblDetalhe.Location = new Point(0, 310);
+            lblDetalhe.Name = "lblDetalhe";
+            lblDetalhe.Padding = new Padding(15, 0, 0, 4);
+            lblDetalhe.Size = new Size(800, 34);
+            lblDetalhe.TabIndex = 2;
+            lblDetalhe.Text = "Itens da venda selecionada";
+            lblDetalhe.TextAlign = ContentAlignment.BottomLeft;
+            //
+            // dgvItens
+            //
+            dgvItens.AllowUserToAddRows = false;
+            dgvItens.AllowUserToDeleteRows = false;
+            dgvItens.AutoGenerateColumns = false;
+            dgvItens.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvItens.BackgroundColor = SystemColors.Window;
+            dgvItens.Columns.AddRange(new DataGridViewColumn[] { colItemNome, colItemPreco, colItemQuantidade, colItemSubtotal });
+            dgvItens.Dock = DockStyle.Fill;
+            dgvItens.Location = new Point(0, 344);
+            dgvItens.MultiSelect = false;
+            dgvItens.Name = "dgvItens";
+            dgvItens.ReadOnly = true;
+            dgvItens.RowHeadersVisible = false;
+            dgvItens.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvItens.Size = new Size(800, 196);
+            dgvItens.TabIndex = 3;
+            //
+            // colItemNome
+            //
+            colItemNome.DataPropertyName = "Nome";
+            colItemNome.FillWeight = 45F;
+            colItemNome.HeaderText = "Instrumento";
+            colItemNome.Name = "colItemNome";
+            colItemNome.ReadOnly = true;
+            //
+            // colItemPreco
+            //
+            precoStyle.Format = "C2";
+            colItemPreco.DataPropertyName = "PrecoUnitario";
+            colItemPreco.DefaultCellStyle = precoStyle;
+            colItemPreco.FillWeight = 20F;
+            colItemPreco.HeaderText = "Preço Unit.";
+            colItemPreco.Name = "colItemPreco";
+            colItemPreco.ReadOnly = true;
+            //
+            // colItemQuantidade
+            //
+            colItemQuantidade.DataPropertyName = "Quantidade";
+            colItemQuantidade.FillWeight = 10F;
+            colItemQuantidade.HeaderText = "Qtd.";
+            colItemQuantidade.Name = "colItemQuantidade";
+            colItemQuantidade.ReadOnly = true;
+            //
+            // colItemSubtotal
+            //
+            subtotalStyle.Format = "C2";
+            colItemSubtotal.DataPropertyName = "Subtotal";
+            colItemSubtotal.DefaultCellStyle = subtotalStyle;
+            colItemSubtotal.FillWeight = 25F;
+            colItemSubtotal.HeaderText = "Subtotal";
+            colItemSubtotal.Name = "colItemSubtotal";
+            colItemSubtotal.ReadOnly = true;
+            //
+            // RelatorioForm
+            //
+            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 540);
+            Controls.Add(dgvItens);
+            Controls.Add(lblDetalhe);
+            Controls.Add(dgvVendas);
+            Controls.Add(lblResumo);
+            Font = new Font("Segoe UI", 10F);
+            MinimizeBox = false;
+            Name = "RelatorioForm";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Relatório de Vendas";
+            Load += RelatorioForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvVendas).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvItens).EndInit();
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private Label lblResumo;
+        private DataGridView dgvVendas;
+        private DataGridViewTextBoxColumn colId;
+        private DataGridViewTextBoxColumn colData;
+        private DataGridViewTextBoxColumn colCliente;
+        private DataGridViewTextBoxColumn colItens;
+        private DataGridViewTextBoxColumn colTotal;
+        private Label lblDetalhe;
+        private DataGridView dgvItens;
+        private DataGridViewTextBoxColumn colItemNome;
+        private DataGridViewTextBoxColumn colItemPreco;
+        private DataGridViewTextBoxColumn colItemQuantidade;
+        private DataGridViewTextBoxColumn colItemSubtotal;
+    }
+}

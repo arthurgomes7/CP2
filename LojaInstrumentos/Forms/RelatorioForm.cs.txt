@@ -1,0 +1,43 @@
+using LojaInstrumentos.Models;
+using LojaInstrumentos.Services;
+
+namespace LojaInstrumentos.Forms
+{
+    public partial class RelatorioForm : Form
+    {
+        public RelatorioForm()
+        {
+            InitializeComponent();
+        }
+
+        private void RelatorioForm_Load(object? sender, EventArgs e)
+        {
+            CarregarVendas();
+        }
+
+        private void CarregarVendas()
+        {
+            var vendas = Repositorio.Vendas.OrderByDescending(v => v.Data).ToList();
+            dgvVendas.DataSource = vendas;
+
+            var totalGeral = vendas.Sum(v => v.Total);
+            lblResumo.Text = vendas.Count == 0
+                ? "Nenhuma venda registrada ainda."
+                : $"{vendas.Count} venda(s)  |  Total vendido: {totalGeral:C2}";
+
+            MostrarItensDaVenda();
+        }
+
+        private void MostrarItensDaVenda()
+        {
+            dgvItens.DataSource = dgvVendas.CurrentRow?.DataBoundItem is Venda venda
+                ? venda.Itens.ToList()
+                : null;
+        }
+
+        private void dgvVendas_SelectionChanged(object? sender, EventArgs e)
+        {
+            MostrarItensDaVenda();
+        }
+    }
+}
